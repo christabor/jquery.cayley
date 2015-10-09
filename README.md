@@ -6,7 +6,7 @@ Generate Cayley Tables (Punnett Squares, function composition, etc...) with ease
 
 ## Demo
 
-TODO
+[View demo](http://christabor.github.io/jquery.cayley)
 
 ## Usage
 
@@ -25,10 +25,12 @@ TODO
 3. Call the plugin:
 
   ```javascript
-  $("#element").({
-    propertyName: "a custom value"
-  });
+$('#table').jq_cayley({
+	values: [1, 2, 3, 4]
+});
   ```
+
+See [demo page](demo/index.html) for more information.
 
 ## Team
 
