@@ -1,3 +1,8 @@
+/*!
+ * jquery.cayley - A jquery plugin for generating cayley tables.
+ * (c) 2015 Chris Tabor <dxdstudio@gmail.com>
+ * <3
+ */
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
 ;(function($, window, document, undefined) {
