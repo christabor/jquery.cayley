@@ -19,7 +19,7 @@ Generate Cayley Tables (Punnett Squares, function composition, etc...) with ease
 2. Include plugin's code:
 
   ```html
-  <script src="dist/jquery.jquery.cayley.min.js"></script>
+  <script src="dist/jquery.cayley.min.js"></script>
   ```
 
 3. Call the plugin:
