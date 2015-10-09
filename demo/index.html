@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery.cayley</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<style>
+		li {
+			margin: 0.5em 0 0.5em 1em;
+		}
+	</style>
+</head>
+<body>
+	<section class="container style-hollow">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="text-center">
+					Cayley table generator. <br>
+				<small>Generate all types of combinations between arbitrary values, using a single array.</small>
+				</h1>
+				<table id="table" class="text-center table table-striped table-bordered"></table>
+		<h4>Try it out:</h4>
+		<p>Enter values separated by a comma</p>
+		<input type="text" id="custom" class="form-control">
+		<hr>
+		<h4>Usage</h4>
+		<code>
+			$('#table').jq_cayley({
+				values: [1, 2, 3, 4]
+			});
+		</code>
+		<h4>Usage options</h4>
+		{
+		<ul class="list-unstyled">
+			<li>
+				<span class="label label-danger">required</span>
+				<strong>values [array]</strong>: the items to combine.
+			</li>
+			<li>
+				<span class="label label-default">optional</span>
+				<strong>operation [function]</strong>: a function that takes two elements (row and column) and combines them in some way.
+			</li>
+		</ul>
+		}
+	</div>
+</div>
+</section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="../src/jquery.cayley.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#table').jq_cayley({
+			values: [1, 2, 3, 4]
+		});
+		$('#custom').on('keypress keyup keydown', function(){
+			$('#table').jq_cayley({
+				values: $(this).val().trim().split(',')
+			});
+		});
+	});
+</script>
+</body>
+</html>
