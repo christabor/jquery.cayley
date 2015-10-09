@@ -41,6 +41,19 @@
 			</li>
 		</ul>
 		}
+		<hr>
+		<h4>More examples</h4>
+		<h5>Punnett square <small>(genomics)</small></h5>
+		<table id="punnett" class="text-center table table-striped table-bordered"></table>
+
+		<h5>Multiplication table <small>(math)</small></h5>
+		<table id="multi" class="text-center table table-striped table-bordered"></table>
+
+		<h5>Composition <small>(category theory)</small></h5>
+		<table id="composition" class="text-center table table-striped table-bordered"></table>
+
+		<h5>Truth table <small>(programming/logic)</small></h5>
+		<table id="truth" class="text-center table table-striped table-bordered"></table>
 	</div>
 </div>
 </section>
@@ -50,6 +63,30 @@
 	$(document).ready(function(){
 		$('#table').jq_cayley({
 			values: [1, 2, 3, 4]
+		});
+		$('#punnett').jq_cayley({
+			values: ['aa', 'ab', 'bb', 'ba'],
+			operation: function(a, b) {
+				return a + b;
+			}
+		});
+		$('#multi').jq_cayley({
+			values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+			operation: function(a, b) {
+				return a * b;
+			}
+		});
+		$('#composition').jq_cayley({
+			values: ['f', 'g', 'h', 'i'],
+			operation: function(a, b) {
+				return a + ' o ' + b;
+			}
+		});
+		$('#truth').jq_cayley({
+			values: [true, false, false, true],
+			operation: function(a, b) {
+				return a & b;
+			}
 		});
 		$('#custom').on('keypress keyup keydown', function(){
 			$('#table').jq_cayley({
