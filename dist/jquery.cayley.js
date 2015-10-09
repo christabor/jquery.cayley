@@ -18,10 +18,9 @@
 		td: function(datum) {
 			return '<td>' + datum + '</td>';
 		},
-		generateTable: function(opts) {
-			console.log(el, opts);
+		generateTable: function(options) {
 			var el = this;
-			var opts = $.extend({}, this.defaults, opts);
+			var opts = $.extend({}, this.defaults, options);
 			var values = opts.values;
 			var operation = opts.operation;
 			if(!operation) { operation = function(el1, el2) {return el1 + ' + ' + el2;};}
