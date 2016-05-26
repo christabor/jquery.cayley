@@ -30,8 +30,6 @@ $('#table').jq_cayley({
 });
   ```
 
-See [demo page](demo/index.html) for more information.
-
 ## Team
 
 jquery.cayley was created by Chris Tabor, with help from these [contributors](https://github.com/christabor/jquery.cayley/graphs/contributors).
